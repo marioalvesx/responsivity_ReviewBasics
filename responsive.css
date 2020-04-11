@@ -1,0 +1,117 @@
+/* media queries */
+html {
+    font-size: 50%;
+}
+  
+  @media (max-width: 630px) {
+    .hero .container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .hero .container img {
+      order: -1;
+    }
+  
+    .form-group {
+      display: block;
+    }
+  }
+  
+  @media (max-width: 540px) {   /* Menu Hamburguer - Quando chegar até 540px */
+    nav {
+      display: none;
+    }
+  
+    .one,
+    .two,
+    .three {
+      background-color: #fff;
+      height: 2px;
+      width: 100%;
+      margin: 6px auto;
+  
+      transition-duration: 0.3s;
+    }
+  
+    .menu-toggle {
+      width: 40px;
+      height: 30px;
+      margin-right: 20px;
+    }
+  
+    /* Fullscreem do menu hamburguer */
+    .menu-section.on {  /* Acessando a nova seção criada no Menu */
+      position: absolute;
+      top: 0;
+      left: 0;
+  
+      width: 100vw;
+      height: 100vh;
+  
+      background-color: #7159c1;
+  
+      z-index: 10;  /* Eixo-Z vai ficar na camada 10 */
+  
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .menu-section.on nav {
+      display: block;
+    }
+  
+    .menu-section.on .menu-toggle {
+      position: absolute;
+      right: 25px;
+      top: 15px;
+    }
+  
+    /* Criar o 'X' quando o botão for clicado */
+    .menu-section.on .menu-toggle .one {
+      transform: rotate(45deg) translate(7px, 7px); /* Uma das barras do 'X' */
+      transition-duration: 0.5s;
+    }
+  
+    .menu-section.on .menu-toggle .two{
+      opacity: 0;
+      transition-duration: 0.5s;
+    }
+  
+    .menu-section.on .menu-toggle .three {
+      transform: rotate(-45deg) translate(5px, -5px); /* Outra das barras do 'X' */
+      transition-duration: 0.5s;
+    }
+  
+    .menu-section.on nav ul {
+      text-align: center;
+      display: inline;
+    }
+  
+    .menu-section.on nav ul a{
+      transition-duration: 0.5s;
+      font-size: 3rem;
+      line-height: 8rem;
+      display: block;
+    }
+  
+  }
+  
+  @media (max-width: 320px) {
+    #form h3 {
+      font-size: 2rem;
+    }
+  }
+  
+  /* Responvidade da homepage concluída :) */
+  
+  /* 
+  Para se aprofundar:
+    -> @media print: Para IMPRESSÃO;
+    -> @media screem;
+    -> @media agrupamentos: Exemplo: media all and (max-width: 10px)
+  
+    * O ideal é agrupar e ir ajeitando a responsividade conforme a necessidade.
+  
+  */
