@@ -56,3 +56,4 @@ JPG, PNG, vs SVG
 SVG - Resolucao mantida independente da aproximacao da imagem.
 
 #### POWERED BY: Rocketseat
+Video: https://www.youtube.com/watch?v=H91DhKPjhPk
